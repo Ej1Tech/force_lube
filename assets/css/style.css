@@ -229,7 +229,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
     position: relative;
     /* background:url(../images/welcome-hero/welcome-banner.mp4)no-repeat; */
     background-color: transparent;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-position: center;
     background-size: cover;
     z-index: 1;
