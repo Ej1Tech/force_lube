@@ -295,7 +295,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
         6. About Products
 --------------------------------------*/
 .products{
-    background: var(--light-gray);
+    /* background: var(--light-gray); */
     padding:112px 0 120px;
 }
 .products-content{padding-top:96px;}
