@@ -124,4 +124,44 @@ $(document).ready(function(){
 					owl.trigger('stop.owl.autoplay')
 				})
 
+				// IV. ...........
+					const $lightbox = $('#lightbox');
+					const $lightboxImage = $('#lightbox-image');
+					let currentIndex = 0;
+			
+					// Open lightbox
+					$('.blog-item').on('click', function () {
+						currentIndex = parseInt($(this).data('index'));
+						const imgSrc = $(this).find('img').attr('src');
+						$lightboxImage.attr('src', imgSrc);
+						$lightbox.removeClass('hidden');
+					});
+			
+					// Close lightbox
+					$('.lightbox-close').on('click', function () {
+						$lightbox.addClass('hidden');
+					});
+			
+					// Navigate to next image
+					$('.lightbox-next').on('click', function () {
+						currentIndex = (currentIndex + 1) % $('.blog-item').length;
+						const nextImgSrc = $('.blog-item').eq(currentIndex).find('img').attr('src');
+						$lightboxImage.attr('src', nextImgSrc);
+					});
+			
+					// Navigate to previous image
+					$('.lightbox-prev').on('click', function () {
+						currentIndex = (currentIndex - 1 + $('.blog-item').length) % $('.blog-item').length;
+						const prevImgSrc = $('.blog-item').eq(currentIndex).find('img').attr('src');
+						$lightboxImage.attr('src', prevImgSrc);
+					});
+			
+					// Close lightbox on background click
+					$lightbox.on('click', function (e) {
+						if ($(e.target).is('#lightbox')) {
+							$lightbox.addClass('hidden');
+						}
+					});
+				
+
 });

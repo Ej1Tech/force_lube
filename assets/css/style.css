@@ -292,7 +292,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
 /*.welcome-hero-txt*/
 
 /*-------------------------------------
-        6. About Products
+        4. About Products
 --------------------------------------*/
 .products{
     /* background: var(--light-gray); */
@@ -329,7 +329,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
 /*.owl-dots */
 
 /*-------------------------------------
-        6. featured-products or (! Blog)
+        5. featured-products or (! Blog)
 --------------------------------------*/
 .featured-products{
     padding:112px 0 120px;
@@ -364,7 +364,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
 /*.single-featured-products*/
 
 /*-------------------------------------       
-        8. Clients-say 
+        6. Clients-say 
 --------------------------------------*/
 .clients-say{padding:115px 0 80px;background: var(--light-gray);}
 
@@ -372,7 +372,9 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
 .single-testimonial-box  {
     padding: 50px 30px 57px;
     text-align: center;
-    border: 1px solid #dadfe9;
+    border: 1px dotted var(--blue);
+    background-color: var(--white);
+    border-radius: 14px;
     overflow-x: hidden;
     -webkit-transition: .3s; 
     -moz-transition:.3s; 
@@ -439,30 +441,131 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
 /*owl carousel*/
 
 /*-------------------------------------
-        9. Brand
+        7. Blog
 --------------------------------------*/
-.brand{
-    padding: 120px 0;
-}
-.brand-area {
-    position:relative;
-}
-.brand-area .item {
-    padding: 0 40px 0;
+.blog {
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+    text-align: center;
 }
 
-.brand .brand-area .owl-carousel .owl-item img {
-    display: block;
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.blog-item {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-item img {
     width: 100%;
-    height:72px;
-    border-radius:0;
+    height: auto;
+    display: block;
+}
+
+.blog-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.blog-item p {
+    font-size: 1em;
+    padding: 0 15px 15px;
+    color: var(--gray);
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+}
+.hidden {
+    display: none;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+#lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightbox-close {
+    position: absolute;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 20px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.lightbox-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.lightbox-controls button {
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    color: var(--white);
+    font-size: 30px;
+    cursor: pointer;
+}
+.lightbox-close i,.lightbox-controls button i{
+    opacity: .7;
+}
+
+.lightbox-close:hover i,.lightbox-controls button:hover i {
+    opacity: 1;
 }
 /*-------------------------------------
-        10. Blog
---------------------------------------*/
-
-/*-------------------------------------
-        12. Contact
+        8. Contact
 --------------------------------------*/
 .contact {
     background: var(--red);
@@ -550,6 +653,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
     align-items: center;
     justify-content: center;
     margin: 2px;
+    opacity: 0.5;
     color: var(--white);
     font-size: 20px;
     padding: 10px;
@@ -562,7 +666,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
     -o-transition:.3s;
     transition: .3s;
 }
-.footer-social a:hover{background-color: var(--blue);}
+.footer-social a:hover{opacity: 1;}
 /*.footer-copyright */
 
 /*===============================
