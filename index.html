@@ -144,7 +144,7 @@
 											<!-- <p class="products-para2">
 												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
 											</p> -->
-											<button class="welcome-btn products-btn" onclick="window.location.href='#'">
+											<button class="welcome-btn products-btn" onclick="window.location.href='#blog'">
 												view details
 											</button>
 										</div><!--/.product-text-->	
@@ -169,7 +169,7 @@
 											<!-- <p class="products-para2">
 												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
 											</p> -->
-											<button class="welcome-btn products-btn" onclick="window.location.href='#'">
+											<button class="welcome-btn products-btn" onclick="window.location.href='#blog'">
 												view details
 											</button>
 										</div><!--/.product-text-->	
@@ -194,7 +194,7 @@
 											<!-- <p class="products-para2">
 												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
 											</p> -->
-											<button class="welcome-btn products-btn" onclick="window.location.href='#'">
+											<button class="welcome-btn products-btn" onclick="window.location.href='#blog'">
 												view details
 											</button>
 										</div><!--/.product-text-->	
@@ -279,34 +279,44 @@
 		</section><!--/.clients-say-->	
 		<!-- clients-say end -->
 
-		<!-- Blog Start -->
-<section id="blog" class="blog">
-    <div class="container">
-        <h2 class="section-title">Blog Gallery</h2>
-        <div class="blog-gallery">
-            <!-- Blog Post 1 -->
-            <div class="blog-item">
-                <img src="./assets/images/products/3.jpg" alt="Blog Post 1">
-                <h3>Blog Post Title 1</h3>
-                <p>Short description of blog post 1.</p>
-            </div>
-            <!-- Blog Post 2 -->
-            <div class="blog-item">
-                <img src="./assets/images/products/3.jpg" alt="Blog Post 2">
-                <h3>Blog Post Title 2</h3>
-                <p>Short description of blog post 2.</p>
-            </div>
-            <!-- Blog Post 3 -->
-            <div class="blog-item">
-                <img src="./assets/images/products/3.jpg" alt="Blog Post 3">
-                <h3>Blog Post Title 3</h3>
-                <p>Short description of blog post 3.</p>
-            </div>
-            <!-- Add more blog items as needed -->
-        </div>
-    </div>
-</section>
-<!-- Blog End -->
+			<!-- Blog Start -->
+	<section id="blog" class="blog">
+		<div class="container">
+			<h2 class="section-title">Blog Gallery</h2>
+			<div class="blog-gallery">
+				<!-- Blog Post 1 -->
+				<div class="blog-item" data-index="0">
+					<img src="./assets/images/products/1.jpg" alt="Blog Post 1">
+					<h3>Blog Post Title 1</h3>
+					<p>Short description of blog post 1.</p>
+				</div>
+				<!-- Blog Post 2 -->
+				<div class="blog-item" data-index="1">
+					<img src="./assets/images/products/2.jpg" alt="Blog Post 2">
+					<h3>Blog Post Title 2</h3>
+					<p>Short description of blog post 2.</p>
+				</div>
+				<!-- Blog Post 3 -->
+				<div class="blog-item" data-index="2">
+					<img src="./assets/images/products/3.jpg" alt="Blog Post 3">
+					<h3>Blog Post Title 3</h3>
+					<p>Short description of blog post 3.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Lightbox -->
+	<div id="lightbox" class="lightbox hidden">
+		<div class="lightbox-content">
+			<span class="lightbox-close"><i class="fa fa-close"></i></span>
+			<img id="lightbox-image" src="" alt="Lightbox Image">
+			<div class="lightbox-controls">
+				<button class="lightbox-prev"><i class="fa fa-angle-left"></i></button>
+				<button class="lightbox-next"><i class="fa fa-angle-right"></i></button>
+			</div>
+		</div>
+	</div>
+	<!-- Blog End -->
 
 
 		<!--contact start-->
