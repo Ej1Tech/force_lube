@@ -147,7 +147,6 @@ html,body{height: 100%;}
 nav.navbar.bootsnav {
     background-color: transparent;
     border-bottom: transparent;
-    z-index: 99 !important;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: var(--white);box-shadow: 0 2px 5px rgba(0,0,0,.2);}
 
@@ -199,7 +198,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 /*.nav li*/
 
 /*.menu-ui-design*/
-.menu-ui-design{overflow-y:scroll;height: 350px;}
+.menu-ui-design{height: 350px;}
 .menu-ui-design::-webkit-scrollbar {
     width:0;
 }
@@ -220,6 +219,71 @@ nav.navbar.bootsnav .navbar-toggle {
     top: 0;
 }
 nav.navbar.bootsnav .navbar-toggle i{color: var(--red);}
+
+.navbar-collapse.in {
+    overflow-y: visible; /* for custom select options visible */
+}
+nav .lang{
+    position: relative;
+    top: 20px;
+    width: 100px;
+}
+/* custom select option */
+.custom-select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .custom-select-box i{
+    margin: 2px;
+  }
+/* Initial state for the custom select options */
+  .custom-select-options {
+    display: none; 
+    position: absolute; 
+    background-color: var(--red);
+    border-top: 1px solid var(--white);
+    text-align: center;
+    color: var(--black);
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .custom-select-options.open {
+    display: block; 
+  }
+  
+  /* Style for each option */
+  .option {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  
+  .option:hover {
+    background-color: var(--red);
+    color: var(--white);
+  }
+  
+  /* Style for the custom select box */
+  .custom-select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--red);
+    padding: 5px;
+    background-color: var(--red);
+    color: var(--white);
+    user-select: none;
+  }
+  
 /*.navbar-toggle */
 
 /*-------------------------------------

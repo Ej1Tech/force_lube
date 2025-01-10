@@ -163,5 +163,38 @@ $(document).ready(function(){
 						}
 					});
 				
+					 // Toggle options dropdown
+    $(".custom-select-box").on("click", function () {
+		$("#select-lang").toggleClass("open");
+	  });
+  
+	  // Handle language selection
+	  $("#select-lang .option").on("click", function () {
+		var selectedLang = $(this).text().trim(); // Get the language name
+		var langValue = $(this).data("value"); // Get the language value
+		var langTranslate = $(this).data("translate"); // Get the translate data
+  
+		// Update the displayed language
+		$("#selected-lang").text(selectedLang);
+  
+		// Optional: Update the page translation or language settings
+		changeLanguage(langValue);
+  
+		// Close the dropdown
+		$("#select-lang").removeClass("open");
+	  });
+  
+	  // Function to change language (customize as needed)
+	  function changeLanguage(lang) {
+		console.log("Language changed to:", lang);
+		// Add your language change logic here, such as AJAX calls or DOM updates
+	  }
+  
+	  // Close dropdown if clicked outside
+	  $(document).on("click", function (e) {
+		if (!$(e.target).closest(".custom-select").length) {
+		  $("#select-lang").removeClass("open");
+		}
+	  });
 
 });

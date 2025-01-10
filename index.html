@@ -1,12 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
-
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -95,6 +91,22 @@
 				                    <li class="scroll"><a href="#blog">Blog</a></li>
 				                    <li class="scroll"><a href="#clients-say">clients say</a></li>
 				                    <li class="scroll"><a href="#contact">contact</a></li>
+									<li class="lang">
+										<div class="custom-select">
+											<div class="custom-select-box">
+											  <span id="selected-lang">Français</span>
+											  <i class="fa fa-angle-down"></i>
+											</div>
+											<ul id="select-lang" class="custom-select-options">
+											  <li class="option" data-value="fr" data-translate="frLang">
+												Français
+											  </li>
+											  <li class="option" data-value="ar" data-translate="arLang">
+												العربية
+											  </li>
+											</ul>
+										  </div>
+									</li>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->
@@ -209,76 +221,6 @@
 		</section><!--/.products-->
 		<!--products end -->
 
-
-		<!-- clients-say strat -->
-		<section id="clients-say"  class="clients-say">
-			<div class="container">
-				<div class="section-header">
-					<h2>what our clients say</h2>
-				</div><!--/.section-header-->
-				<div class="row">
-					<div class="owl-carousel testimonial-carousel">
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c1.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Force Lube is the best product I’ve used. I never use anything else!									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">Iyehah</a></h2>
-										<h4>Nktt</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c2.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Force Lube is the best product I’ve used. I never use anything else!									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">Iyehah</a></h2>
-										<h4>Nktt</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c3.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Force Lube is the best product I’ve used. I never use anything else!									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">Iyehah</a></h2>
-										<h4>Nktt</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-					</div><!--/.testimonial-carousel-->
-				</div><!--/.row-->
-			</div><!--/.container-->
-
-		</section><!--/.clients-say-->	
-		<!-- clients-say end -->
-
 			<!-- Blog Start -->
 	<section id="blog" class="blog">
 		<div class="container">
@@ -317,6 +259,75 @@
 		</div>
 	</div>
 	<!-- Blog End -->
+
+	<!-- clients-say strat -->
+	<section id="clients-say"  class="clients-say">
+		<div class="container">
+			<div class="section-header">
+				<h2>what our clients say</h2>
+			</div><!--/.section-header-->
+			<div class="row">
+				<div class="owl-carousel testimonial-carousel">
+					<div class="col-sm-3 col-xs-12">
+						<div class="single-testimonial-box">
+							<div class="testimonial-description">
+								<div class="testimonial-info">
+									<div class="testimonial-img">
+										<img src="assets/images/clients/c1.png" alt="image of clients person" />
+									</div><!--/.testimonial-img-->
+								</div><!--/.testimonial-info-->
+								<div class="testimonial-comment">
+									<p>
+										Force Lube is the best product I’ve used. I never use anything else!									</div><!--/.testimonial-comment-->
+								<div class="testimonial-person">
+									<h2><a href="#">Iyehah</a></h2>
+									<h4>Nktt</h4>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-description-->
+						</div><!--/.single-testimonial-box-->
+					</div><!--/.col-->
+					<div class="col-sm-3 col-xs-12">
+						<div class="single-testimonial-box">
+							<div class="testimonial-description">
+								<div class="testimonial-info">
+									<div class="testimonial-img">
+										<img src="assets/images/clients/c2.png" alt="image of clients person" />
+									</div><!--/.testimonial-img-->
+								</div><!--/.testimonial-info-->
+								<div class="testimonial-comment">
+									<p>
+										Force Lube is the best product I’ve used. I never use anything else!									</div><!--/.testimonial-comment-->
+								<div class="testimonial-person">
+									<h2><a href="#">Iyehah</a></h2>
+									<h4>Nktt</h4>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-description-->
+						</div><!--/.single-testimonial-box-->
+					</div><!--/.col-->
+					<div class="col-sm-3 col-xs-12">
+						<div class="single-testimonial-box">
+							<div class="testimonial-description">
+								<div class="testimonial-info">
+									<div class="testimonial-img">
+										<img src="assets/images/clients/c3.png" alt="image of clients person" />
+									</div><!--/.testimonial-img-->
+								</div><!--/.testimonial-info-->
+								<div class="testimonial-comment">
+									<p>
+										Force Lube is the best product I’ve used. I never use anything else!									</div><!--/.testimonial-comment-->
+								<div class="testimonial-person">
+									<h2><a href="#">Iyehah</a></h2>
+									<h4>Nktt</h4>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-description-->
+						</div><!--/.single-testimonial-box-->
+					</div><!--/.col-->
+				</div><!--/.testimonial-carousel-->
+			</div><!--/.row-->
+		</div><!--/.container-->
+
+	</section><!--/.clients-say-->	
+	<!-- clients-say end -->
 
 
 		<!--contact start-->
