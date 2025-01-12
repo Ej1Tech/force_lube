@@ -60,54 +60,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    const gallery = document.getElementById('gallery');
+    const modalImage = document.getElementById('modalImage');
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
     const galleryFolder = 'assets/images/';
     const images = [
         'IMG_0710.jpg',
         'IMG_0719.jpg',
-        'IMG_0724.jpg',
+        'IMG_0724.JPG',
         'IMG_0726.jpg',
-        'IMG_0734.jpg',
+        'IMG_0734.JPG',
     ]; // Replace with actual image file names in the folder.
-    const gallery = document.getElementById('gallery');
-    const modalImage = document.getElementById('modalImage');
-    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+
     let currentIndex = 0;
 
-    // Load images dynamically
-    images.forEach((image, index) => {
-        const col = document.createElement('div');
-        col.className = 'col-sm-6 col-md-4 col-lg-3';
-        col.innerHTML = `
-            <img src="${galleryFolder}${image}" 
-                 alt="Image ${index + 1}" 
-                 class="img-fluid rounded shadow-sm gallery-img" 
-                 style="cursor: pointer;" 
-                 data-index="${index}">
-        `;
-        gallery.appendChild(col);
-    });
-
-    // Open modal on image click
-    gallery.addEventListener('click', function (e) {
-        if (e.target.classList.contains('gallery-img')) {
-            currentIndex = parseInt(e.target.getAttribute('data-index'));
+    // Attach click event listeners to images already in the HTML
+    gallery.querySelectorAll('.gallery-img').forEach((img, index) => {
+        img.setAttribute('data-index', index); // Update data-index attribute to match the index
+        img.addEventListener('click', function () {
+            currentIndex = parseInt(img.getAttribute('data-index'));
             showImage();
             imageModal.show();
-        }
+        });
     });
 
-    // Show image in modal
+    // Show the image in the modal
     function showImage() {
         modalImage.src = `${galleryFolder}${images[currentIndex]}`;
     }
 
-    // Navigate to previous image
+    // Navigate to the previous image
     document.getElementById('prevImage').addEventListener('click', function () {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
         showImage();
     });
 
-    // Navigate to next image
+    // Navigate to the next image
     document.getElementById('nextImage').addEventListener('click', function () {
         currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
         showImage();
