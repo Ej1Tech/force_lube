@@ -5,9 +5,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const languageSelect = document.getElementById('languageSelect');
 
     languageSelect.addEventListener('change', function () {
-        document.body.lang = this.value;
-        document.body.dir = this.value === 'ar' ? 'rtl' : 'ltr'; // Set text direction
+        // Change language and direction
+        const selectedLang = this.value;
+        document.body.lang = selectedLang;
+        document.body.dir = selectedLang === 'ar' ? 'rtl' : 'ltr'; // Set text direction
+
+        // Load the corresponding language JSON file
+        loadLanguage(selectedLang);
     });
+
+    // Load the default language on page load
+    loadLanguage(languageSelect.value || 'en');
+
+    function loadLanguage(lang) {
+        // Fetch the language JSON file
+        fetch(`langs/${lang}/${lang}.json`)
+            .then(response => response.json())
+            .then(data => updateTranslations(data))
+            .catch(error => console.error('Error loading language file:', error));
+    }
+
+    // Update all elements with the `data-translate` attribute
+    function updateTranslations(translations) {
+        const translateElements = document.querySelectorAll('[data-translate]');
+
+        translateElements.forEach(element => {
+            const translationKey = element.getAttribute('data-translate');
+            if (translations[translationKey]) {
+                element.textContent = translations[translationKey];
+            }
+        });
+    }
 });
 
 // ======================== Smooth Scrolling for Navigation Links ========================
