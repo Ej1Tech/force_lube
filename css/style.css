@@ -99,7 +99,7 @@ select:focus {
 
 .navbar .nav-link {
     position: relative;
-    width: 70px;
+    width: 90px;
     color: var(--black);
     font-weight: bold;
     text-decoration: none;
@@ -222,7 +222,11 @@ select:focus {
 
 
 /* ======================== Gallery Section ======================== */
-
+.modal-footer .btn:is(:hover,:focus){
+    color: var(--white)!important;
+    background-color: var(--red);
+    border: none;
+}
 
 /* ======================== Contact Section ======================== */
 
