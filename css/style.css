@@ -229,8 +229,28 @@ select:focus {
 }
 
 /* ======================== Contact Section ======================== */
-
-
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.number > img{
+    width: 25px;
+}
+.number >a{
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ .number >a{
+    color: var(--black);
+}
+.number >a:is(:hover,:focus){
+    color: var(--red);
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
 /* ======================== Utility Classes ======================== */
 
 /* Fixed button styles */
@@ -242,7 +262,17 @@ select:focus {
     height: 50px;
     border-radius: 50%;
 }
-
+.whatsapp{
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+.whatsapp:hover{
+    background-color: #25D366;
+}
 
 /* Go to Top button */
 #goToTop {
@@ -250,3 +280,8 @@ select:focus {
 }
 
 /* ======================== Footer Section ======================== */
+.developed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
