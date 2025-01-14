@@ -4,18 +4,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     const languageSelect = document.getElementById('languageSelect');
 
+    // Load the saved language from local storage or default to 'ar'
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'ar';
+    languageSelect.value = savedLanguage;
+    document.body.lang = savedLanguage;
+    document.body.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
+    loadLanguage(savedLanguage);
+
     languageSelect.addEventListener('change', function () {
         // Change language and direction
         const selectedLang = this.value;
         document.body.lang = selectedLang;
         document.body.dir = selectedLang === 'ar' ? 'rtl' : 'ltr'; // Set text direction
 
+        // Save the selected language in local storage
+        localStorage.setItem('selectedLanguage', selectedLang);
+
         // Load the corresponding language JSON file
         loadLanguage(selectedLang);
     });
-
-    // Load the default language on page load
-    loadLanguage(languageSelect.value || 'en');
 
     function loadLanguage(lang) {
         // Fetch the language JSON file
@@ -37,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
 
 // ======================== Smooth Scrolling for Navigation Links ========================
 document.addEventListener('DOMContentLoaded', function () {
