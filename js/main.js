@@ -4,8 +4,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const languageSelect = document.getElementById('languageSelect');
 
-    // Load the saved language from local storage or default to 'en'
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    // Load the saved language from local storage or default to 'ar'
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'ar';
     languageSelect.value = savedLanguage;
     document.body.lang = savedLanguage;
     document.body.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
