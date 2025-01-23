@@ -142,7 +142,7 @@ select:focus {
 }
 
 .navbar .form-select {
-    border: 1px solid var(--light-gray);
+    border: 1px solid var(--black);
     border-radius: 5px;
 }
 
