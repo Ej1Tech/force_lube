@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
     languageSelect.value = savedLanguage;
     document.body.lang = savedLanguage;
     document.body.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
+
+    // Set text direction for numbers
+    document.querySelectorAll('.numbers').forEach(element => {
+        element.dir = 'ltr';
+    });
     loadLanguage(savedLanguage);
 
     languageSelect.addEventListener('change', function () {
